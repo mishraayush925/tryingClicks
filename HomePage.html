@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+.jumbotron {
+  background: url('hero-image.jpg') no-repeat center center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+header, section, footer {
+  animation-duration: 1s;
+}
+
+#contact .form-control {
+  border-radius: 0;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#contact .form-control:focus {
+  border-color: #007bff;
+}
+
+footer p {
+  margin: 0;
+}
+
+    </style>
+    <script>
+        // Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Website</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">PhotoBiz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="jumbotron jumbotron-fluid text-center animate__animated animate__fadeIn" id="home">
+    <div class="container">
+      <h1 class="display-4">Capture Your Moments</h1>
+      <p class="lead">Professional Photography Services</p>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Gallery</h2>
+      <div class="row">
+        <!-- Add your images here -->
+        <div class="col-md-4 mb-4">
+          <div class="card animate__animated animate__zoomIn">
+            <img src="image1.jpg" class="card-img-top" alt="Image 1">
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card animate__animated animate__zoomIn">
+            <img src="image2.jpg" class="card-img-top" alt="Image 2">
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card animate__animated animate__zoomIn">
+            <img src="image3.jpg" class="card-img-top" alt="Image 3">
+          </div>
+        </div>
+        <!-- Repeat as necessary -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Your Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputMessage">Message</label>
+          <textarea class="form-control" id="inputMessage" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 PhotoBiz. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
